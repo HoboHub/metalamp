@@ -1,0 +1,12 @@
+extends ../pug/layout.pug
+include ../blocks/button/button
+
+block meta
+    title Home
+
+block content
+    h1 Заголовок
+    p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    +button('Press me')
+    //- script 
+        //- include ../blocks/button/button.js

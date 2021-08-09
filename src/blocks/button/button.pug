@@ -1,0 +1,7 @@
+mixin button(name)
+    if (name)
+        .button(class=attributes.class)#js-button #{name}
+        //- .button(text= name)
+    else
+        .button(class=attributes.class)#js-button Кнопка
+        //- .button(text= 'Кнопка')
