@@ -128,6 +128,13 @@ module.exports = {
         filename: `./js/${filename('js')}`,
         assetModuleFilename: '[path]/[name].[ext]'
     },
+    //
+    resolve: {
+        alias: {
+            Fonts: path.resolve(__dirname, 'src/fonts'),
+        }
+    },
+    //
     devServer: {
         historyApiFallback: true,
         contentBase: path.resolve(__dirname, './dist'),
@@ -171,8 +178,9 @@ module.exports = {
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            hmr: isDev,
+                            // hmr: isDev,
                             // reloadAll: isDev,
+                            // publicPath: '../../', //------
                         },
                     },
                     'css-loader'
@@ -194,24 +202,62 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(?:|ico|gif|png|svg|jpeg|jpg)$/,
+                test: /\.(?:|ico|gif|png|jpeg|jpg)$/,
+                // test: /\.(?:|ico|gif|png|svg|jpeg|jpg)$/,
                 type: 'asset/resource',
             },
             {
-                test: /\.(?:|woff(2)?|eot|ttf|otf)$/,
-                type: 'asset/inline',
+                test: /\.(ttf|otf|eot|woff|woff2|svg)$/,
+                // use: ['url-loader?limit=10000'],
                 use: [
                     {
-                        loader: 'file-loader',
-                        options: {
-                            name: `./fonts/${filename('[ext]')}`,
-                            publicPath: '../',
-                            // name: '[name].[ext]',
-                            // outputPath: 'fonts/',
+                       loader: 'url-loader',
+                       options: {
+                           limit: 10000,
+                        //    name: '[name].[ext]',
+                           name: `fonts/[name].[ext]`,
+                        //    publicPath: '../',
+                        //    publicPath: 'http://localhost:4300/',
+                        //    outputPath: 'fonts/',
                         },
-                    }
-                ],
+                    },
+                ]
+
+                // use: ['url-loader?limit=10000&mimetype=application/font-woff']
             },
+            // {
+            //     test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+            //     use: ['url-loader?limit=10000&mimetype=application/font-woff']
+            // }, 
+            // {
+            //     test: /\.[ot]tf$/,
+            //     use: ['url-loader?limit=10000&mimetype=application/octet-stream']
+            // }, 
+            // {
+            //     test: /\.(eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+            //     use: ['file-loader']
+            // },
+
+            // {
+            //     // test: /\.(?:|ttf|woff(2)?|eot|otf|svg)(\?v=\d+\.\d+\.\d+)?$/,
+            //     // test: /\.(?:|woff(2)?|eot|ttf|otf|svg)$/,
+            //     // test: /\.(ttf?otf|eot|woff(2)|svg)$/,
+
+            //     test: /\.(ttf|otf|eot|woff|woff2|svg)$/,
+            //     type: 'asset/inline',
+            //     use: [
+            //         {
+            //             loader: 'file-loader',
+            //             options: {
+            //                 // name: `./fonts/${filename('[ext]')}`,
+            //                 name: `fonts/[name].[ext]`,
+            //                 publicPath: '../',
+            //                 // name: '[name].[ext]',
+            //                 // outputPath: 'fonts/',
+            //             },
+            //         }
+            //     ],
+            // },
         ]
     }
 }

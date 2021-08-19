@@ -1,0 +1,10 @@
+mixin colorBlock(name, opacity='100%', hex)
+    .color__item(class=attributes.class)#js-color
+        .color__square(style=`background-color: ${hex}; opacity: ${opacity}`)
+        .color__content
+            if (opacity)
+                .color__header= name + ' ' + opacity
+                .color__hex= hex
+            else
+                .color__header= name
+                .color__hex= hex

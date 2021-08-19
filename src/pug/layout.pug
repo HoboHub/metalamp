@@ -1,5 +1,6 @@
-//- block lets
-//-     - let pageTitle = 'Default Title';
+block lets
+    - let wrapper = 'default__wrapper';
+    //- - let pageTitle = 'Default Title';
 
 doctype html
 html(lang="en")
@@ -14,4 +15,6 @@ html(lang="en")
             //- link(rel='stylesheet', href='css/style.css')
 
     body
-        block content
+        div(class=`${wrapper}`)
+            img(class='logo' src="../img/icon.svg", alt="logo")
+            block content

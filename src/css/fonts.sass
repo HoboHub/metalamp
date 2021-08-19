@@ -1,15 +1,96 @@
-@font-face
-  font-family: 'Roboto'
-//   src: url("../../src/fonts/Roboto/RobotoRegular.ttf")
-//   src: url("file:///Users/user/WebstormProjects/bem-webpack-pug/src/fonts/Roboto/RobotoRegular.ttf") format('truetype')
-  src: url("http://localhost:63342/bem-webpack-pug/src/fonts/Roboto/RobotoRegular.ttf") format('truetype')
+// @mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false )
+//   @font-face
+//     font-family: $font-family
+//     font-weight: $weight
+//     font-style: $style
+//     @if $asset-pipeline == true 
+//       src: font-url('#{$file-path}.eot')
+//       src: font-url('#{$file-path}.eot?#iefix') format('embedded-opentype'), font-url('#{$file-path}.woff') format('woff'), font-url('#{$file-path}.ttf') format('truetype')
+//     @else
+//       src: url('#{$file-path}.eot')
+//       src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype')
+  
+// @font-face
+//   font-family: 'Roboto'
+//   src: url("../fonts/Roboto/Roboto-Regular.ttf") format('truetype')
+  // src: url("../fonts/Roboto/Roboto-Regular.woff") format('woff')
+  // src: url("../fonts/Roboto/Roboto-Regular.svg") format('svg')
+
+// @font-face
+//   font-family: 'RobotoItalic'
+//   // src: url("../fonts/Roboto_Bold_Italic/Roboto-BoldItalic.eot") format('embedded-opentype')
+//   src: url("../fonts/Roboto_Bold_Italic/Roboto-BoldItalic.ttf") format('truetype')
+//   src: url("../fonts/Roboto_Bold_Italic/Roboto-BoldItalic.svg") format('svg')
+//   font-weight: normal
+//   font-style: normal  
+
+  // src: url("../fonts/Roboto_Bold_Italic/Roboto-BoldItalic.woff") format('woff')
+  // src: url("../fonts/Roboto_Bold_Italic/Roboto-BoldItalic.otf") format('opentype')
+
+  // src: url("../fonts/Roboto_Bold_Italic/roboto-bolditalic-webfont.woff") format('woff')
+  // src: url("../fonts/Roboto_Bold_Italic/roboto-bolditalic-webfont.woff2") format('woff2')
+  // font-weight: 400
+  // font-style: normal
+  
+  // src: url("../fonts/Roboto_Bold_Italic/Roboto-BoldItalic.eot?#iefix") format('embedded-opentype')
+
+  // font-weight: normal
+  // font-style: normal
+  // src: url("../fonts/Roboto_Bold_Italic/Roboto-BoldItalic.woff") format('woff')
+  // src: url("../fonts/Roboto_Bold_Italic/roboto-bolditalic-webfont.woff") format('woff')
+  // src: url("../fonts/Roboto_Bold_Italic/roboto-bolditalic-webfont.woff2") format('woff2')
+
+// @font-face
+//     font-family: 'PaletteMosaic'
+//     src: url("../fonts/PaletteMosaic/PaletteMosaicRegular.ttf") format('truetype')
+//     src: url("../fonts/PaletteMosaic/PaletteMosaicRegular.woff") format('woff')
+//     src: url("../fonts/PaletteMosaic/PaletteMosaicRegular.svg") format('svg')
+    // src: url("../fonts/PaletteMosaic/PaletteMosaicRegular.otf") format('opentype')
+    // src: url("../fonts/PaletteMosaic/PaletteMosaicRegular.eot") format('embedded-opentype')
+
+   
+// @font-face
+//     font-family: 'Montserrat'
+//     src: url("../fonts/Montserrat/montserrat_alternates_black.ttf") format('truetype')
+//     src: url("../fonts/Montserrat/montserrat_alternates_black.woff") format('woff')
+//     src: url("../fonts/Montserrat/montserrat_alternates_black.svg") format('svg')
+
+// @font-face
+//     font-family: 'Montserrat'
+//     src: local('Montserrat'), 
+//     url("../fonts/Montserrat/montserrat_alternates_black.woff") format('woff'),
+//     url("../fonts/Montserrat/montserrat_alternates_black.ttf") format('truetype'),
+//     url("../fonts/Montserrat/montserrat_alternates_black.svg") format('svg')
+//     font-weight: normal
+//     font-style: normal
+    // url("files:/Users/user/WebstormProjects/metalamp-bem-webpack/dist/fonts/Montserrat/montserrat_alternates_black.svg") format('svg')
+
+// @font-face
+//     font-family: 'Montserrat'
+//     src: local('Montserrat'), 
+//     url("../fonts/Montserrat/montserrat_alternates_black.woff") format('woff'),
+//     url("../fonts/Montserrat/montserrat_alternates_black.ttf") format('truetype'),
+//     url("../fonts/Montserrat/montserrat_alternates_black.svg") format('svg')
+//     font-weight: normal
+//     font-style: normal
 
 @font-face
-    font-family: 'Palette_Mosaic'
-    // src: url("file:///Users/user/WebstormProjects/bem-webpack-pug/src/fonts/PaletteMosaic/PaletteMosaicRegular.ttf") format('truetype')
+    font-family: 'Montserrat'
+    src: local('Montserrat'), 
+    // url("http://localhost:4300/src/fonts/Montserrat/montserrat_alternates_black.woff") format('woff'),
+    // url("http://localhost:4300/src/fonts/Montserrat/montserrat_alternates_black.ttf") format('truetype'),
+    // url("http://localhost:4300/src/fonts/Montserrat/montserrat_alternates_black.svg") format('svg')
+    url("../fonts/Montserrat/montserrat_alternates_black.woff") format('woff'),
+    url("../fonts/Montserrat/montserrat_alternates_black.ttf") format('truetype'),
+    url("../fonts/Montserrat/montserrat_alternates_black.svg") format('svg')
+    font-weight: normal
+    font-style: normal
 
-    src: url("http://localhost:63342/bem-webpack-pug/src/fonts/PaletteMosaic/PaletteMosaicRegular.ttf") format('truetype')
-    // src: url("http://localhost:63342/bem-webpack-pug/src/fonts/PaletteMosaic/PaletteMosaicRegular.eot") format('eot')
-    // src: url("http://localhost:63342/bem-webpack-pug/src/fonts/PaletteMosaic/PaletteMosaicRegular.otf") format('otf')
-    // src: url("http://localhost:63342/bem-webpack-pug/src/fonts/PaletteMosaic/PaletteMosaicRegular.woff") format('woff')
-    // src: url("../../src/fonts/PaletteMosaic/PaletteMosaicRegular.woff") format('woff')
+// @font-face
+//     font-family: 'PaletteMosaic'
+//     src: local('PaletteMosaic'),
+//     url("../fonts/PaletteMosaic/PaletteMosaicRegular.woff") format('woff'),
+//     url("../fonts/PaletteMosaic/PaletteMosaicRegular.ttf") format('truetype'),
+//     url("../fonts/PaletteMosaic/PaletteMosaicRegular.svg") format('svg')
+//     font-weight: normal
+//     font-style: normal
